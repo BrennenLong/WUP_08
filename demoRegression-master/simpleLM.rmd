@@ -36,6 +36,61 @@ predict(simp,new,se.fit=TRUE)
 # HEADWTH
 ## Model LENGTH ~ HEADWTH 
 
+```{r}
+simpHW <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simpHW)
+summary.lm(simpHW)
+```
+
+```{r}
+new <- data.frame(HEADWTH=bears$HEADWTH [c(5, 15, 23)])
+predict(simpHW,new,se.fit=TRUE)
+```
+
+
+# HEADLEN
+## Model LENGTH ~ HEADLEN
+
+```{r}
+simpHL <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simpHL)
+summary.lm(simpHL)
+```
+
+```{r}
+new <- data.frame(HEADLEN=bears$HEADLEN [c(5, 15, 23)])
+predict(simpHL,new,se.fit=TRUE)
+```
+
+
+# WEIGHT
+## Model LENGTH ~ WEIGHT
+
+```{r}
+simpWT <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simpWT)
+summary.lm(simpWT)
+```
+
+```{r}
+new <- data.frame(WEIGHT=bears$WEIGHT [c(5, 15, 23)])
+predict(simpWT,new,se.fit=TRUE)
+```
+
+
+# CHEST
+## Model LENGTH ~ CHEST
+
+```{r}
+simpCT <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simpCT)
+summary.lm(simpCT)
+```
+
 
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
