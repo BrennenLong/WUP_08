@@ -29,8 +29,7 @@ summary.lm(simp)
 
 
 ```{r}
-new <- data.frame(NECK=c(17,22,26))
-predict(simp,new)
+new <- data.frame(NECK=bears$NECK [c(5, 15, 23)])
 predict(simp,new,se.fit=TRUE)
 ```
 
